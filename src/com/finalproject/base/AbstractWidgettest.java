@@ -5,19 +5,21 @@ public abstract class AbstractWidgettest implements WidgetsInterfacetest {
 
     private int totalitems;
     private boolean large;
-    private Spokes spokes;
-    private Bearings bearings;
+    private Gears gears;
+    private Springs springs;
+    private Levers levers;
 
 
-    public AbstractWheel(int size, boolean wide) {
+    public AbstractWidgettest(int totalitems, boolean large) {
         this.totalitems = totalitems;
         this.large = large;
-        spokes = new Spokes();
-        bearings = new Bearings();
+        gears = new Gears();
+        springs = new Springs();
+        levers = new Levers();
     }
 
     @Override
-    public int getTotalitems() {
+    public int getTotalItems() {
         return totalitems;
     }
 
@@ -27,9 +29,10 @@ public abstract class AbstractWidgettest implements WidgetsInterfacetest {
     }
 
     @Override
-    public void acceptVisitor(WheelVisitorInterface visitor) {
-        spokes.acceptVisitor(visitor);
-        bearings.acceptVisitor(visitor);
+    public void acceptVisitor(WidgetsInterfacetest visitor) {
+        gears.acceptVisitor(visitor);
+        springs.acceptVisitor(visitor);
+        levers.acceptVisitor(visitor);
         visitor.visit(this);
 
     }

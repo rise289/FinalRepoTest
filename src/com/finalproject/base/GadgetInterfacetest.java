@@ -9,7 +9,7 @@ public interface GadgetInterfacetest {
     float getPrice();
     void paint(GadgetColor color);
 
-    /*void cleanFrame();
-    void airTires();
-    void testRide();*/
+    /*void gears();
+    void springs();
+    void levers();*/
 }

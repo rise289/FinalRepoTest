@@ -7,7 +7,7 @@ public abstract class AbstractGadgettest implements GadgetInterfacetest {
     private WidgetsInterfacetest widget;
     private GadgetColor color;
 
-    protected AbstractGadgettest(WidgetsInterfacetest GadgetColor color){
+    protected AbstractGadgettest(WidgetsInterfacetest widget, GadgetColor color){
         this.widget = widget;
         this.color = color;
     }
@@ -21,10 +21,10 @@ public abstract class AbstractGadgettest implements GadgetInterfacetest {
         return widget;
     }
 
-    @Override
+    /*@Override
     public GadgetColor getColor() {
         return color;
-    }
+    }*/
 
     @Override
     public void paint(GadgetColor color) {
@@ -37,24 +37,24 @@ public abstract class AbstractGadgettest implements GadgetInterfacetest {
     }
 
     @Override
-    public void cleanFrame() {
-        System.out.println("Cleaning Frame......");
+    public void widgetGears() {
+        System.out.println("Widget Gears......");
     }
 
     @Override
-    public void airTires() {
-        System.out.println("Airing up Tires......");
+    public void widgetSprings() {
+        System.out.println("Widget Springs......");
     }
 
     @Override
-    public void testRide() {
-        System.out.println("Taking bike out for a test ride......");
+    public void widgetLevers() {
+        System.out.println("Widget Levers......");
     }
 
     @Override
     public String toString() {
         return getClass().getSimpleName() +
-                " ("+totalitems+", "+color+", price = $"+getPrice()+")";
+                " ("+getTotalItems()+", "+color+", price = $"+getPrice()+")";
     }
 } // end class
 

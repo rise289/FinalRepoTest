@@ -1,0 +1,32 @@
+package com.finalproject.base;
+
+import com.finalproject.java.GadgetColor;
+
+
+    public class MediumGadgetTest extends AbstractGadgettest {
+
+        public MediumGadgettest(WidgetsInterfacetest widget, GadgetColor color){
+            super(widget,color);
+        } //end method
+
+        public MediumGadgettest(WidgetsInterfacetest widget){
+            this(widget, GadgetColor.PAINTED);
+        } //end method
+
+        @Override
+        public float getPrice(){
+            return 570.00f;
+        }
+
+        @Override
+        public WidgetsInterfacetest getWidget() {
+            return null;
+        }
+
+        @Override
+        public void paint(GadgetColor color) {
+
+        }
+    }
+
+}

@@ -5,3 +5,4 @@ public abstract class SmallWidgettest extends AbstractWidgettest{
         super(totalitems, false);
     }
 }
+
